@@ -46,7 +46,7 @@ namespace LibVar
             double result = 0;
             int n = 0;
 
-            current = Math.Pow(x, 2 * n) / F(2 * n + 1);
+            current = Math.Pow(x, 2 * n + 1) / F(2 * n + 1);
             result += current;
             n++;
 
