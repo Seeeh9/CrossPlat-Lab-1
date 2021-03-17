@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
 namespace ConsoleLibVar
 {
     class Program
     {
         /// <summary>
-        /// Виклик бiблiотечних методів Average(a,b), S(x,n), Seps(xarg, e) з LibVar.dll
+        /// Виклик бiблiотечних методів Average(a,b), Summ(x,n), Seps(xarg, e) з LibVar.dll
         /// </summary>
         static void Main(string[] args)
         {
@@ -23,6 +23,7 @@ namespace ConsoleLibVar
             Console.WriteLine();
 
 
+
             Console.WriteLine("2) Знаходження суми ряду.");
 
             Console.Write("Введiть n: ");
@@ -31,7 +32,7 @@ namespace ConsoleLibVar
             Console.Write("Введiть x: ");
             double x = double.Parse(Console.ReadLine());
 
-            double summ = LibVar.LibFunc.Summ(x, n); // виклик методу обчислення S(x,n) з бібліотеки
+            double summ = LibVar.LibFunc.Summ(x, n); // виклик методу обчислення Summ(x,n) з бібліотеки
 
             Console.WriteLine("Сума ряду = {0}", summ);
             Console.WriteLine();
@@ -50,7 +51,7 @@ namespace ConsoleLibVar
             double sh = (Math.Exp(xarg) + Math.Exp(-xarg)) / 2; // обчислення точного значення
             double t = (Math.Abs(Summ - sh) / sh) * 100; // обчислення помилки
 
-            Console.WriteLine("Сума ряду = {0}, точне значення = {1}, помилка = {2} %", Summ, sh, Math.Round(t,3));
+            Console.WriteLine("Сума ряду = {0}, точне значення = {1}, помилка = {2} %", Summ, sh, Math.Round(t, 3));
 
             Console.ReadKey();
         }
