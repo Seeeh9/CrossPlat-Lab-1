@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace LibVar
 {
@@ -27,9 +27,9 @@ namespace LibVar
         public static double Summ (double x, int n)
         {
             double result = 0;
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                result = result + Math.Pow(-1, n - 1) * Math.Pow(x, 2 * n - 1) / F(2 * n - 1);
+                result += Math.Pow(-1, i - 1) * Math.Pow(x, 2 * i - 1) / F(2 * i - 1);
             }
             return result;
         }
